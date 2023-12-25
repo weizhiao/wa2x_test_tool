@@ -1,0 +1,6 @@
+/target
+.vscode
+Cargo.lock
+binary
+aot
+coremark

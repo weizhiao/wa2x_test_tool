@@ -1,14 +1,12 @@
-#![feature(c_size_t)]
-use std::mem::MaybeUninit;
 use std::ptr::NonNull;
 use std::time::Instant;
-use std::{io::Write, path::Path};
+use std::io::Write;
 
 // 你需要使用get_bin来生成binary目录
 mod binary;
 
 use binary::{TEST, TEST_NAME};
-use core::ffi::{c_int, c_size_t, c_void};
+use core::ffi::c_void;
 use runtime::wasi::WasiState;
 use runtime::{wasi, AsContextMut, FuncType, Linker, Result, ValType};
 use runtime::{Config, Engine, Func, Module, Store};
